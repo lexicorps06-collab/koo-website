@@ -1,0 +1,284 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23A8241D'/%3E%3Ccircle cx='16' cy='16' r='10' fill='none' stroke='white' stroke-width='3'/%3E%3Ccircle cx='16' cy='16' r='5' fill='none' stroke='white' stroke-width='3'/%3E%3C/svg%3E"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Koo – Kente stole</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..800&family=Anonymous+Pro:wght@400;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--red:#A8241D;--ink:#100D0B;--cream:#F2EADF;--paper:#F7F2EA;--indigo:#1D2856;--gold:#E2B13C;--line:rgba(16,13,11,.14)}
+body{background:#E6E0D6;font-family:"Inter",system-ui,sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased}
+.page{width:1440px;margin:0 auto;background:var(--paper);overflow:hidden}
+.mono{font-family:"Anonymous Pro","DejaVu Sans Mono",monospace;font-size:13px;letter-spacing:.04em;text-transform:uppercase}
+.disp{font-family:"Inter Display","Inter",sans-serif;font-weight:800;letter-spacing:-.045em;line-height:.86}
+.pill{display:inline-flex;align-items:center;gap:8px;height:36px;padding:0 16px;border-radius:999px;font-size:14px;font-weight:500;background:rgba(255,255,255,.12);color:#fff;backdrop-filter:blur(6px)}
+.pill.dark{background:rgba(16,13,11,.06);color:var(--ink)}
+.cta{display:inline-flex;align-items:center;gap:14px;height:52px;padding:0 6px 0 24px;border-radius:999px;background:#fff;color:var(--ink);font-weight:600;font-size:15px}
+.cta i{width:40px;height:40px;border-radius:50%;background:var(--ink);display:flex;align-items:center;justify-content:center}
+.cta.ink{background:var(--ink);color:#fff}.cta.ink i{background:#fff}
+svg{display:block}
+/* hero */
+.hero{position:relative;height:940px;background:var(--red);color:#fff;overflow:hidden}
+.hero .grain{position:absolute;inset:0;width:100%;height:100%;mix-blend-mode:multiply;opacity:.55}
+.nav{position:absolute;top:24px;left:32px;right:32px;display:flex;align-items:center;justify-content:space-between;z-index:5}
+.nav .grp{display:flex;gap:8px;width:420px}.nav .grp.r{justify-content:flex-end}
+.hero .fig{position:absolute;left:470px;top:70px;width:690px;height:920px}
+.hero h1{position:absolute;left:32px;top:370px;font-size:136px;color:#fff}
+.hero .meta{position:absolute;left:32px;right:32px;top:612px;display:flex;justify-content:space-between}
+.strip{position:absolute;left:0;right:0;top:650px;height:170px;display:flex;gap:4px;align-items:flex-start}
+.strip .t{flex:none;width:200px;height:170px;overflow:hidden;position:relative}
+.strip .t.big{width:216px;height:260px}
+.strip .t span{position:absolute;left:8px;bottom:8px;color:#fff;background:rgba(16,13,11,.6);padding:3px 7px;border-radius:4px;font-size:11px}
+.prog{position:absolute;left:32px;bottom:34px;width:320px;display:flex;flex-direction:column;gap:8px}
+.prog .bar{height:2px;background:rgba(255,255,255,.3);position:relative}.prog .bar b{position:absolute;left:0;top:0;height:2px;width:54px;background:#fff}
+.hero .shop{position:absolute;right:32px;bottom:24px}
+/* cloth */
+.cloth{padding:56px 32px 64px;background:var(--paper)}
+.cols{display:flex;justify-content:space-between;gap:24px}
+.cols > div{width:300px;line-height:18px}
+.cols b{font-weight:700}
+.big-word{position:relative;margin-top:150px;height:300px;display:flex;align-items:center;justify-content:center}
+.big-word .disp{font-size:330px;line-height:1;letter-spacing:-.06em;display:flex;gap:0}
+.big-word .gap{width:250px}
+.big-word .inset{position:absolute;left:575px;top:-60px;width:270px;height:420px;overflow:hidden;box-shadow:0 30px 60px rgba(16,13,11,.25)}
+.swatches{display:flex;justify-content:center;gap:18px;margin-top:96px}
+.sw{display:flex;flex-direction:column;align-items:center;gap:8px;width:120px}
+.sw .s{width:120px;height:72px;overflow:hidden;filter:grayscale(1);opacity:.75}
+.sw.on .s{filter:none;opacity:1;outline:2px solid var(--ink);outline-offset:3px}
+.sw.on .mono{font-weight:700}
+.tags{text-align:center;margin-top:36px;line-height:22px;color:rgba(16,13,11,.6)}
+/* shop */
+.shopsec{padding:80px 32px;border-top:1px solid var(--line)}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:32px}
+.sec-head h2{font-size:96px}
+.filters{display:flex;gap:8px}
+.grid{display:flex;flex-wrap:wrap;gap:40px 16px}
+.card{width:332px;display:flex;flex-direction:column;gap:12px}
+.card .img{width:332px;height:415px;overflow:hidden;position:relative}
+.card .img .tag{position:absolute;left:12px;top:12px;background:var(--paper);padding:4px 8px;border-radius:4px}
+.card .row{display:flex;justify-content:space-between;align-items:baseline}
+.card .name{font-weight:600;font-size:16px}
+.card .price{font-weight:600;font-size:16px;font-variant-numeric:tabular-nums}
+.card .mono{color:rgba(16,13,11,.55)}
+/* archive */
+.archive{position:relative;background:var(--ink);color:#fff;height:900px;overflow:hidden}
+.archive .ghost{position:absolute;left:50%;top:40px;transform:translateX(-50%);opacity:.06}
+.fan{position:absolute;left:0;right:0;top:170px;height:460px}
+.fan .c{position:absolute;width:300px;height:380px;border-radius:22px;overflow:hidden;border:1.5px solid rgba(255,255,255,.35);box-shadow:0 30px 60px rgba(0,0,0,.5)}
+.fan .c .lab{position:absolute;left:16px;right:16px;bottom:14px;display:flex;justify-content:space-between;color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.6)}
+.archive .copy{position:absolute;left:0;right:0;top:680px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:20px}
+.archive h2{font-family:"Inter Display","Inter";font-weight:300;font-size:64px;letter-spacing:-.03em;line-height:1}
+.archive p{color:rgba(255,255,255,.65);font-size:17px}
+/* journal */
+.journal{position:relative;height:860px;background:#2F4FB8;color:#fff;overflow:hidden}
+.journal .fig{position:absolute;right:120px;top:90px;width:640px;height:850px}
+.journal .top{position:absolute;left:32px;right:32px;top:28px;display:flex;justify-content:space-between}
+.journal h2{position:absolute;left:32px;top:210px;font-size:120px;width:820px;color:#fff}
+.journal .dek{position:absolute;left:32px;top:560px;width:420px;font-family:"Crimson Text",serif;font-size:24px;line-height:31px;font-style:italic}
+.journal .read{position:absolute;left:32px;bottom:48px}
+.stories{display:flex;gap:16px;padding:40px 32px 80px}
+.story{flex:1;display:flex;flex-direction:column;gap:12px}
+.story .img{height:260px;overflow:hidden}
+.story h3{font-size:24px;font-weight:600;letter-spacing:-.02em;line-height:28px}
+.story .mono{color:rgba(16,13,11,.55)}
+/* promises */
+.promise{display:flex;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.promise div{flex:1;padding:28px 32px;border-left:1px solid var(--line);display:flex;flex-direction:column;gap:6px}
+.promise div:first-child{border-left:0}
+.promise b{font-size:16px;font-weight:600}
+.promise span{font-size:14px;color:rgba(16,13,11,.6);line-height:20px}
+/* footer */
+.foot{background:var(--red);color:#fff;padding:56px 32px 28px;position:relative;overflow:hidden}
+.foot .fcols{display:flex;gap:64px}
+.foot .news{width:440px;display:flex;flex-direction:column;gap:16px}
+.foot .news h3{font-size:30px;font-weight:600;letter-spacing:-.02em;line-height:34px}
+.foot .field{display:flex;height:52px;border-bottom:1.5px solid #fff;align-items:center;justify-content:space-between;font-size:16px;color:rgba(255,255,255,.7)}
+.foot ul{list-style:none;display:flex;flex-direction:column;gap:10px;font-size:15px}
+.foot .mark{margin-top:72px}
+.foot .base{display:flex;justify-content:space-between;margin-top:28px;opacity:.75}
+.cur{display:flex;gap:6px;flex-wrap:wrap}
+.cur span{border:1px solid rgba(255,255,255,.4);border-radius:999px;padding:5px 10px}
+.cur span.on{background:#fff;color:var(--red)}
+
+.topnav{display:flex;align-items:center;justify-content:space-between;padding:24px 32px;position:relative;z-index:5}
+.topnav .grp{display:flex;gap:8px;width:440px}.topnav .grp.r{justify-content:flex-end}
+.on-paper .pill{background:rgba(16,13,11,.06);color:var(--ink)}
+.crumb{color:rgba(16,13,11,.55)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:52px;padding:0 24px;border-radius:999px;font-weight:600;font-size:15px;background:var(--ink);color:#fff}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+.btn.light{background:#fff;color:var(--ink)}
+.chip{display:inline-flex;align-items:center;height:34px;padding:0 14px;border-radius:999px;border:1px solid var(--line);font-size:14px;font-weight:500}
+.chip.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.rule{height:1px;background:var(--line)}
+h1.disp,h2.disp{font-weight:800}
+.lead{font-size:19px;line-height:28px;color:rgba(16,13,11,.75)}
+.body{font-family:"Crimson Text",Georgia,serif;font-size:22px;line-height:34px;color:#231c17}
+.acc{border-top:1px solid var(--line)}
+.acc .h{display:flex;justify-content:space-between;align-items:center;padding:18px 0;font-weight:600;font-size:16px}
+.acc .c{padding:0 0 18px;font-size:15px;line-height:23px;color:rgba(16,13,11,.72)}
+.field2{display:flex;flex-direction:column;gap:6px;flex:1}
+.field2 label{font-size:13px;font-weight:600}
+.inp{height:48px;border:1px solid rgba(16,13,11,.22);border-radius:10px;padding:0 14px;display:flex;align-items:center;justify-content:space-between;font-size:15px;background:#fff}
+.inp.ph{color:rgba(16,13,11,.4)}
+.opt{display:flex;align-items:center;gap:14px;padding:16px;border:1px solid rgba(16,13,11,.22);border-radius:12px;background:#fff}
+.opt.on{border:2px solid var(--ink)}
+.opt .o{width:18px;height:18px;border-radius:50%;border:1.5px solid rgba(16,13,11,.4);flex:none}
+.opt.on .o{border:6px solid var(--ink)}
+.sumrow{display:flex;justify-content:space-between;font-size:15px;padding:6px 0}
+.size{width:64px;height:48px;border:1px solid rgba(16,13,11,.22);border-radius:10px;display:flex;align-items:center;justify-content:center;font-weight:600}
+.size.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.size.off{color:rgba(16,13,11,.3);text-decoration:line-through}
+.check{width:18px;height:18px;border:1.5px solid rgba(16,13,11,.35);border-radius:4px;flex:none}
+.check.on{background:var(--ink);border-color:var(--ink)}
+.frow{display:flex;align-items:center;gap:10px;font-size:15px;padding:6px 0}
+.frow .n{margin-left:auto;color:rgba(16,13,11,.45);font-size:13px}
+</style><link rel="stylesheet" href="motion.css"><link rel="stylesheet" href="mobile.css"><style>
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+button.pill,button.chip,button.size,button.btn{cursor:pointer}
+.bag-n:not(:empty)::before{content:" "}
+.acc .h{width:100%;text-align:left}
+.foot li a:hover,.foot .base a:hover{text-decoration:underline}
+.field input{flex:1;background:transparent;border:0;color:#fff;font:inherit;font-size:16px;outline:none;height:100%}
+.field input::placeholder{color:rgba(255,255,255,.6)}
+.field button{display:flex;align-items:center;justify-content:center;width:40px;height:40px}
+.form-msg{font-size:14px;min-height:20px}
+.cur-list button{border:1px solid rgba(255,255,255,.4);border-radius:999px;padding:5px 10px;color:#fff;font-family:inherit;font-size:inherit;text-transform:uppercase}
+.cur-list button.on{background:#fff;color:var(--red)}
+.cur-pop{position:absolute;z-index:60;background:#fff;color:var(--ink);border-radius:14px;box-shadow:0 12px 32px rgba(0,0,0,.18);padding:8px;display:flex;flex-direction:column;min-width:200px}
+.cur-pop button{text-align:left;padding:10px 12px;border-radius:8px;font-size:15px}
+.cur-pop button:hover,.cur-pop button.on{background:var(--paper)}
+.cur-pop small{padding:8px 12px 4px;color:rgba(16,13,11,.55);font-size:12px}
+.inp{font:inherit;color:var(--ink);width:100%}
+input.inp,select.inp,textarea.inp{appearance:none;-webkit-appearance:none}
+textarea.inp{height:120px;padding:12px 14px;resize:vertical}
+.inp:focus{outline:2px solid var(--ink);outline-offset:1px}
+.inp.bad{border-color:#B42F25;background:#FFF6F5}
+.err{color:#B42F25;font-size:13px;min-height:0}
+.sel-wrap{position:relative}.sel-wrap svg{position:absolute;right:14px;top:16px;pointer-events:none}
+.qty{display:flex;align-items:center;border:1px solid var(--line);border-radius:999px;height:40px}
+.qty button{width:40px;height:40px;font-size:18px}
+.qty b{width:24px;text-align:center}
+.linkish{font-size:14px;text-decoration:underline}
+.modal-bg{position:fixed;inset:0;background:rgba(16,13,11,.5);z-index:120;display:flex;align-items:center;justify-content:center;padding:16px}
+.modal-box{background:var(--paper);color:var(--ink);border-radius:20px;padding:28px;width:min(520px,100%);max-height:90vh;overflow:auto;display:flex;flex-direction:column;gap:14px}
+.modal-box h2{font-size:26px;font-weight:700;letter-spacing:-.02em}
+.toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%);background:var(--ink);color:#fff;padding:12px 18px;border-radius:999px;z-index:130;font-weight:500}
+.empty-state{padding:56px 0;display:flex;flex-direction:column;gap:14px;align-items:flex-start}
+.empty-state h2{font-size:32px;font-weight:700;letter-spacing:-.02em}
+.is-hidden{display:none!important}
+.heart.on svg path{fill:#B42F25;stroke:#B42F25}
+.help-sec{padding:40px 0;border-top:1px solid var(--line);display:flex;gap:48px}
+.help-sec h2{width:320px;flex:none;font-size:40px;font-weight:800;letter-spacing:-.04em;line-height:1}
+.help-sec .c{flex:1;display:flex;flex-direction:column;gap:14px;font-size:17px;line-height:27px;max-width:720px}
+.help-sec table{border-collapse:collapse;width:100%;font-size:15px}
+.help-sec td,.help-sec th{padding:10px 8px;border-bottom:1px solid var(--line);text-align:left}
+.soon{opacity:.6}
+.soon .img{filter:grayscale(.3)}
+@media (max-width:760px){
+  .help-sec{flex-direction:column;gap:16px}.help-sec h2{width:auto;font-size:32px}
+  .help-layout{padding:0 16px 48px!important}
+}
+</style><script>document.documentElement.classList.add('js')</script></head><body>
+<svg width="0" height="0" style="position:absolute"><defs><pattern id="kente" width="38.4" height="38.4" patternUnits="userSpaceOnUse">
+      <rect width="38.4" height="38.4" fill="#E2B13C"/>
+      <rect y="0" width="38.4" height="4.8" fill="#1F5A3B"/>
+      <rect y="4.8" width="38.4" height="1.7999999999999998" fill="#100D0B"/>
+      <rect y="17.4" width="38.4" height="3.5999999999999996" fill="#C2362B"/>
+      <path d="M0 12.0 l4.8 -3.5999999999999996 l4.8 3.5999999999999996 l4.8 -3.5999999999999996 l4.8 3.5999999999999996 l4.8 -3.5999999999999996 l4.8 3.5999999999999996 l4.8 -3.5999999999999996 l4.8 3.5999999999999996" fill="none" stroke="#100D0B" stroke-width="1.32"/>
+      <rect x="2.4" y="24.0" width="7.199999999999999" height="10.799999999999999" fill="#1F5A3B"/>
+      <rect x="21.599999999999998" y="24.0" width="7.199999999999999" height="10.799999999999999" fill="#100D0B"/>
+      <rect x="12.0" y="26.4" width="7.199999999999999" height="6.0" fill="#C2362B"/>
+      <rect x="31.2" y="26.4" width="7.199999999999999" height="6.0" fill="#C2362B"/>
+      <rect x="18.0" y="0" width="1.2" height="38.4" fill="#100D0B" opacity=".35"/>
+    </pattern><pattern id="kenteL" width="70.4" height="70.4" patternUnits="userSpaceOnUse">
+      <rect width="70.4" height="70.4" fill="#E2B13C"/>
+      <rect y="0" width="70.4" height="8.8" fill="#1F5A3B"/>
+      <rect y="8.8" width="70.4" height="3.3000000000000003" fill="#100D0B"/>
+      <rect y="31.900000000000002" width="70.4" height="6.6000000000000005" fill="#C2362B"/>
+      <path d="M0 22.0 l8.8 -6.6000000000000005 l8.8 6.6000000000000005 l8.8 -6.6000000000000005 l8.8 6.6000000000000005 l8.8 -6.6000000000000005 l8.8 6.6000000000000005 l8.8 -6.6000000000000005 l8.8 6.6000000000000005" fill="none" stroke="#100D0B" stroke-width="2.4200000000000004"/>
+      <rect x="4.4" y="44.0" width="13.200000000000001" height="19.8" fill="#1F5A3B"/>
+      <rect x="39.6" y="44.0" width="13.200000000000001" height="19.8" fill="#100D0B"/>
+      <rect x="22.0" y="48.400000000000006" width="13.200000000000001" height="11.0" fill="#C2362B"/>
+      <rect x="57.2" y="48.400000000000006" width="13.200000000000001" height="11.0" fill="#C2362B"/>
+      <rect x="33.0" y="0" width="2.2" height="70.4" fill="#100D0B" opacity=".35"/>
+    </pattern><pattern id="adire" width="56.0" height="56.0" patternUnits="userSpaceOnUse">
+      <rect width="56.0" height="56.0" fill="#1D2856"/>
+      <circle cx="14.0" cy="14.0" r="2.8" fill="none" stroke="#E9E4F2" stroke-width="0.9799999999999999"/><circle cx="21.0" cy="14.0" r="1.1199999999999999" fill="#E9E4F2"/><circle cx="18.9" cy="18.9" r="1.1199999999999999" fill="#E9E4F2"/><circle cx="14.0" cy="21.0" r="1.1199999999999999" fill="#E9E4F2"/><circle cx="9.1" cy="18.9" r="1.1199999999999999" fill="#E9E4F2"/><circle cx="7.0" cy="14.0" r="1.1199999999999999" fill="#E9E4F2"/><circle cx="9.1" cy="9.1" r="1.1199999999999999" fill="#E9E4F2"/><circle cx="14.0" cy="7.0" r="1.1199999999999999" fill="#E9E4F2"/><circle cx="18.9" cy="9.1" r="1.1199999999999999" fill="#E9E4F2"/>
+      <g stroke="#E9E4F2" stroke-width="0.9799999999999999" stroke-linecap="round" fill="none">
+        <path d="M32.199999999999996 5.6 v16.799999999999997 M37.8 5.6 v16.799999999999997 M43.4 5.6 v16.799999999999997 M49.0 5.6 v16.799999999999997"/>
+        <path d="M5.6 33.599999999999994 h16.799999999999997 M5.6 39.199999999999996 h16.799999999999997 M5.6 44.8 h16.799999999999997 M5.6 50.4 h16.799999999999997"/>
+        <path d="M42.0 30.799999999999997 q7.0 11.2 0 22.4 q-7.0 -11.2 0 -22.4z M42.0 30.799999999999997 v22.4"/>
+      </g>
+      <path d="M0 28.0 H56.0 M28.0 0 V56.0" stroke="#E9E4F2" stroke-width="0.5599999999999999" opacity=".5"/>
+    </pattern><pattern id="adireL" width="96.0" height="96.0" patternUnits="userSpaceOnUse">
+      <rect width="96.0" height="96.0" fill="#1D2856"/>
+      <circle cx="24.0" cy="24.0" r="4.8" fill="none" stroke="#E9E4F2" stroke-width="1.68"/><circle cx="36.0" cy="24.0" r="1.92" fill="#E9E4F2"/><circle cx="32.5" cy="32.5" r="1.92" fill="#E9E4F2"/><circle cx="24.0" cy="36.0" r="1.92" fill="#E9E4F2"/><circle cx="15.5" cy="32.5" r="1.92" fill="#E9E4F2"/><circle cx="12.0" cy="24.0" r="1.92" fill="#E9E4F2"/><circle cx="15.5" cy="15.5" r="1.92" fill="#E9E4F2"/><circle cx="24.0" cy="12.0" r="1.92" fill="#E9E4F2"/><circle cx="32.5" cy="15.5" r="1.92" fill="#E9E4F2"/>
+      <g stroke="#E9E4F2" stroke-width="1.68" stroke-linecap="round" fill="none">
+        <path d="M55.199999999999996 9.6 v28.799999999999997 M64.8 9.6 v28.799999999999997 M74.39999999999999 9.6 v28.799999999999997 M84.0 9.6 v28.799999999999997"/>
+        <path d="M9.6 57.599999999999994 h28.799999999999997 M9.6 67.2 h28.799999999999997 M9.6 76.8 h28.799999999999997 M9.6 86.39999999999999 h28.799999999999997"/>
+        <path d="M72.0 52.8 q12.0 19.2 0 38.4 q-12.0 -19.2 0 -38.4z M72.0 52.8 v38.4"/>
+      </g>
+      <path d="M0 48.0 H96.0 M48.0 0 V96.0" stroke="#E9E4F2" stroke-width="0.96" opacity=".5"/>
+    </pattern><pattern id="asooke" width="24.0" height="24.0" patternUnits="userSpaceOnUse">
+      <rect width="24.0" height="24.0" fill="#8A4A2B"/>
+      <rect x="0" width="2.0" height="24.0" fill="#E2B13C" opacity=".9"/>
+      <rect x="6.0" width="1.0" height="24.0" fill="#E2B13C" opacity=".6"/>
+      <rect x="14.0" width="3.0" height="24.0" fill="#000" opacity=".18"/>
+      <rect x="20.0" width="1.0" height="24.0" fill="#E2B13C" opacity=".6"/>
+    </pattern><pattern id="asookeR" width="24" height="24" patternUnits="userSpaceOnUse">
+      <rect width="24" height="24" fill="#7A1E18"/>
+      <rect x="0" width="2" height="24" fill="#E2B13C" opacity=".9"/>
+      <rect x="6" width="1" height="24" fill="#E2B13C" opacity=".6"/>
+      <rect x="14" width="3" height="24" fill="#000" opacity=".18"/>
+      <rect x="20" width="1" height="24" fill="#E2B13C" opacity=".6"/>
+    </pattern><pattern id="bogolan" width="42.0" height="42.0" patternUnits="userSpaceOnUse">
+      <rect width="42.0" height="42.0" fill="#4A2C1C"/>
+      <g stroke="#F2EADF" stroke-width="1.4" fill="none" stroke-linecap="round">
+        <path d="M4.199999999999999 4.199999999999999 l5.6 5.6 M9.799999999999999 4.199999999999999 l-5.6 5.6"/>
+        <path d="M21.0 2.8 v12.6 M16.799999999999997 9.1 h8.399999999999999"/>
+        <path d="M2.8 23.799999999999997 h36.4 M2.8 28.0 h36.4"/>
+        <path d="M5.6 35.0 l4.199999999999999 4.199999999999999 l4.199999999999999 -4.199999999999999 l4.199999999999999 4.199999999999999 l4.199999999999999 -4.199999999999999 l4.199999999999999 4.199999999999999 l4.199999999999999 -4.199999999999999 l4.199999999999999 4.199999999999999"/>
+      </g>
+      <circle cx="33.599999999999994" cy="9.799999999999999" r="2.0999999999999996" fill="#F2EADF"/>
+    </pattern><pattern id="wax" width="72.0" height="72.0" patternUnits="userSpaceOnUse">
+      <rect width="72.0" height="72.0" fill="#0F6B6B"/>
+      <circle cx="17.6" cy="17.6" r="14.4" fill="#E8742C"/><circle cx="17.6" cy="17.6" r="8.8" fill="#F3C64B"/><circle cx="17.6" cy="17.6" r="4.0" fill="#7A1E18"/>
+      <circle cx="53.6" cy="53.6" r="14.4" fill="#E8742C"/><circle cx="53.6" cy="53.6" r="8.8" fill="#F3C64B"/><circle cx="53.6" cy="53.6" r="4.0" fill="#7A1E18"/>
+      <path d="M48.0 8.0 q11.200000000000001 9.600000000000001 0 19.200000000000003 q-11.200000000000001 -9.600000000000001 0 -19.200000000000003z M12.8 44.0 q11.200000000000001 9.600000000000001 0 19.200000000000003 q-11.200000000000001 -9.600000000000001 0 -19.200000000000003z" fill="#F2EADF"/>
+    </pattern><radialGradient id="bRed" cx="35%" cy="30%" r="75%"><stop offset="0" stop-color="#fff" stop-opacity=".95"/>
+      <stop offset=".18" stop-color="#C2362B"/><stop offset=".75" stop-color="#C2362B"/><stop offset="1" stop-color="#000" stop-opacity=".9"/></radialGradient><radialGradient id="bGold" cx="35%" cy="30%" r="75%"><stop offset="0" stop-color="#fff" stop-opacity=".95"/>
+      <stop offset=".18" stop-color="#E2B13C"/><stop offset=".75" stop-color="#E2B13C"/><stop offset="1" stop-color="#000" stop-opacity=".9"/></radialGradient><radialGradient id="bGreen" cx="35%" cy="30%" r="75%"><stop offset="0" stop-color="#fff" stop-opacity=".95"/>
+      <stop offset=".18" stop-color="#1F5A3B"/><stop offset=".75" stop-color="#1F5A3B"/><stop offset="1" stop-color="#000" stop-opacity=".9"/></radialGradient><radialGradient id="bBlue" cx="35%" cy="30%" r="75%"><stop offset="0" stop-color="#fff" stop-opacity=".95"/>
+      <stop offset=".18" stop-color="#2F57C9"/><stop offset=".75" stop-color="#2F57C9"/><stop offset="1" stop-color="#000" stop-opacity=".9"/></radialGradient><radialGradient id="bWhite" cx="35%" cy="30%" r="75%"><stop offset="0" stop-color="#fff" stop-opacity=".95"/>
+      <stop offset=".18" stop-color="#E8E0D0"/><stop offset=".75" stop-color="#E8E0D0"/><stop offset="1" stop-color="#6b5a45" stop-opacity=".9"/></radialGradient><linearGradient id="brass" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFE7A3"/><stop offset=".3" stop-color="#D9A441"/>
+      <stop offset=".55" stop-color="#8C5A16"/><stop offset=".8" stop-color="#E7B95A"/><stop offset="1" stop-color="#6B420E"/></linearGradient><filter id="grain" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.16 0"/><feComposite in2="SourceGraphic" operator="in"/></filter></defs></svg>
+<div class="page"><nav class="topnav on-paper"><div class="grp"><a class="pill" href="shop.html" style="background:#100D0B;color:#fff">Shop</a><a class="pill" href="archive.html" style="">Archive</a><a class="pill" href="journal.html" style="">Journal</a><a class="pill" href="know-your-cloth.html" style="">Know your cloth</a></div><a href="index.html" aria-label="Koo home"><svg width="93" height="30" viewBox="0 0 93.0 30" aria-label="Koo"><path d="M0 0 h6.0 v12.6 L16.8 0 h7.800000000000001 L11.4 13.8 L25.2 30 h-7.800000000000001 L7.199999999999999 18.0 L6.0 19.2 V30 H0 Z" fill="#100D0B"/><circle cx="42.599999999999994" cy="15.0" r="13.2" fill="none" stroke="#100D0B" stroke-width="3.5999999999999996"/><circle cx="42.599999999999994" cy="15.0" r="8.4" fill="none" stroke="#100D0B" stroke-width="3.5999999999999996"/><circle cx="42.599999999999994" cy="15.0" r="2.4" fill="#100D0B"/><circle cx="75.6" cy="15.0" r="13.2" fill="none" stroke="#100D0B" stroke-width="3.5999999999999996"/><circle cx="75.6" cy="15.0" r="8.4" fill="none" stroke="#100D0B" stroke-width="3.5999999999999996"/><circle cx="75.6" cy="15.0" r="2.4" fill="#100D0B"/></svg></a><div class="grp r"><button class="pill cur-pill" type="button" aria-haspopup="true"><span class="cur-label">₦ NGN</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#100D0B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button><a class="pill" href="search.html"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#100D0B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>Search</a><a class="pill bag-pill" href="bag.html"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#100D0B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1 13H6z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span>Bag<b class="bag-n"></b></span></a></div></nav>
+    <section class="pdp" style="display:flex;gap:40px;padding:8px 32px 72px">
+      <div class="pdp-gal" style="display:flex;flex-direction:column;gap:16px"><div><div class="pdp-main" style="view-transition-name:hero-img"><svg class="" style="" width="720" height="900" viewBox="0 0 600 750" preserveAspectRatio="xMidYMid slice"><defs></defs><rect x="-50.0" y="-50.0" width="700.0" height="850.0" fill="#23402F"/><g transform="translate(300 380) scale(0.95)"><path d="M-160 -150 L160 -150 L180 190 L-180 190 Z" transform="translate(10 16)" fill="#000" opacity=".22"/><path d="M-160 -150 L160 -150 L180 190 L-180 190 Z" fill="url(#kente)"/><path d="M-160 -150 L180 190" stroke="#000" stroke-opacity=".2" stroke-width="3"/></g></svg></div></div><div class="pdp-thumbs" style="display:flex;gap:16px"><svg class="" style="" width="352" height="440" viewBox="0 0 352 440" preserveAspectRatio="xMidYMid slice"><defs></defs><rect width="352" height="440" fill="url(#kenteL)"/></svg><svg class="" style="" width="352" height="440" viewBox="40 0 560 700" preserveAspectRatio="xMidYMid slice"><defs></defs><rect x="-10.0" y="-50.0" width="660.0" height="800.0" fill="#3B5BCC"/><circle cx="250" cy="196" r="56" fill="#100D0B"/><path d="M352 236 C378 250 392 280 391 312 C392 330 396 342 404 356 C410 366 414 372 408 378 C402 382 396 382 398 390 C400 396 396 400 400 406 C403 412 398 418 392 422 C394 432 392 444 382 454 C372 462 356 466 344 468 C344 494 348 520 356 540 C300 520 262 520 250 470 C236 452 214 420 210 372 C206 320 222 272 262 248 C290 232 324 228 352 236 Z" fill="#100D0B"/><path d="M356 540 C420 560 500 600 540 660 C566 700 580 760 584 800 L36 800 C40 740 60 680 110 640 C160 600 220 560 250 470 C262 520 300 530 356 540 Z" fill="#100D0B"/><circle cx="268.0" cy="520.0" r="8" fill="url(#bWhite)"/><circle cx="282.0" cy="529.5" r="8" fill="url(#bWhite)"/><circle cx="296.0" cy="537.2" r="8" fill="url(#bWhite)"/><circle cx="310.0" cy="541.4" r="8" fill="url(#bWhite)"/><circle cx="324.0" cy="541.4" r="8" fill="url(#bWhite)"/><circle cx="338.0" cy="537.2" r="8" fill="url(#bWhite)"/><circle cx="352.0" cy="529.5" r="8" fill="url(#bWhite)"/><circle cx="366.0" cy="520.0" r="8" fill="url(#bWhite)"/><circle cx="300" cy="384" r="7" fill="url(#bWhite)"/></svg></div></div><div class="pdp-info" style="width:520px;display:flex;flex-direction:column;gap:20px" data-product="stole" data-name="Kente stole" data-price="96000">
+      <span class="mono crumb"><a href="shop.html">Shop</a> / <a href="shop.html#Wraps and skirts">Wraps and skirts</a></span>
+      <h1 class="disp" style="font-size:72px">Kente stole</h1>
+      <div style="display:flex;justify-content:space-between;align-items:center"><span style="font-size:26px;font-weight:600">₦96,000</span><button type="button" class="chip cur-pill"><span class="cur-label">₦ NGN</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#100D0B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button></div>
+      <p class="lead">A narrow kente stole for graduations, weddings and church, woven in gold, green and red.</p>
+      <span class="mono">Bonwire, GH · Kente</span>
+      <div><span class="mono">Size: One size</span></div>
+      <div style="display:flex;gap:10px"><button type="button" class="btn add-btn" style="flex:1">Add to bag · ₦96,000</button><button type="button" class="btn ghost heart" aria-label="Save to wishlist" aria-pressed="false" style="width:52px;padding:0"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#100D0B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg></button></div>
+      <div class="mono" style="opacity:.65">Ships from Lagos in 2 days</div>
+      <div><div class="acc open"><button class="h" type="button" aria-expanded="true">Details<span>−</span></button><div class="c"><div>Handwoven cotton. 180 × 24 cm, finished with a short fringe.</div></div></div><div class="acc"><button class="h" type="button" aria-expanded="false">The maker<span>+</span></button><div class="c"><div>Made by Akosua Mensah, kente weaver, bonwire. Their name is on the label.</div></div></div><div class="acc"><button class="h" type="button" aria-expanded="false">Care<span>+</span></button><div class="c"><div>Hand wash cold with mild soap and dry in shade. Natural dyes can bleed at first, so wash alone the first three times.</div></div></div><div class="acc"><button class="h" type="button" aria-expanded="false">Shipping and duties<span>+</span></button><div class="c"><div>Ships from Lagos in 2 days. Duties for your country are shown at checkout and paid up front. <a href="help.html#shipping" style="text-decoration:underline">Read more</a>.</div></div></div></div>
+    </div></section>
+    <section class="band" style="display:flex;background:#C4862A;color:var(--ink);height:620px;overflow:hidden">
+          <div class="band-img" style="width:620px;height:620px;flex:none"><svg class="" style="" width="620" height="620" viewBox="40 40 560 720" preserveAspectRatio="xMidYMid slice"><defs></defs><rect x="-10.0" y="-10.0" width="660.0" height="820.0" fill="#C4862A"/><g fill="#100D0B"><path d="M206 360 C170 300 168 220 214 168 C252 124 318 104 390 96 C440 92 478 110 486 146 C492 176 470 206 432 222 C410 232 392 248 382 270 C360 240 300 232 262 250 C232 266 214 310 206 360 Z"/>
+          <path d="M386 98 C420 60 470 48 512 66 C540 80 548 112 530 136 C512 158 486 160 470 150 C488 128 470 104 440 100 Z"/></g>
+          <g stroke="#fff" stroke-opacity=".10" stroke-width="2" fill="none"><path d="M226 300 C240 220 300 160 400 130"/><path d="M236 250 C270 190 330 150 430 150"/><path d="M420 114 C450 96 486 90 516 100"/><path d="M260 210 C300 170 360 150 446 176"/></g><path d="M352 236 C378 250 392 280 391 312 C392 330 396 342 404 356 C410 366 414 372 408 378 C402 382 396 382 398 390 C400 396 396 400 400 406 C403 412 398 418 392 422 C394 432 392 444 382 454 C372 462 356 466 344 468 C344 494 348 520 356 540 C300 520 262 520 250 470 C236 452 214 420 210 372 C206 320 222 272 262 248 C290 232 324 228 352 236 Z" fill="#100D0B"/><path d="M356 540 C420 560 500 600 540 660 C566 700 580 760 584 800 L36 800 C40 740 60 680 110 640 C160 600 220 560 250 470 C262 520 300 530 356 540 Z" fill="#100D0B"/><path d="M250 560 C300 600 380 640 420 800 L300 800 C280 700 240 640 196 600 C214 584 232 572 250 560 Z" fill="url(#kenteL)"/><path d="M250 560 C300 600 380 640 420 800" stroke="#000" stroke-opacity=".35" stroke-width="3" fill="none"/><circle cx="268.0" cy="520.0" r="8" fill="url(#bWhite)"/><circle cx="282.0" cy="529.5" r="8" fill="url(#bWhite)"/><circle cx="296.0" cy="537.2" r="8" fill="url(#bWhite)"/><circle cx="310.0" cy="541.4" r="8" fill="url(#bWhite)"/><circle cx="324.0" cy="541.4" r="8" fill="url(#bWhite)"/><circle cx="338.0" cy="537.2" r="8" fill="url(#bWhite)"/><circle cx="352.0" cy="529.5" r="8" fill="url(#bWhite)"/><circle cx="366.0" cy="520.0" r="8" fill="url(#bWhite)"/><circle cx="300" cy="384" r="7" fill="url(#bWhite)"/></svg></div>
+          <div class="band-txt" style="padding:72px 56px;display:flex;flex-direction:column;gap:24px;justify-content:center">
+            <span class="mono">Kente weaver, Bonwire</span>
+            <p style="font-family:'Crimson Text',serif;font-size:44px;line-height:52px;font-style:italic">Akosua weaves kente in Bonwire and plans each colour block before she starts.</p>
+            <span style="font-weight:600;font-size:17px">Akosua Mensah</span>
+            <a class="cta ink" style="align-self:flex-start" href="makers.html">Meet the makers<i><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#100D0B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i></a></div></section>
+    <section class="shopsec"><div class="sec-head"><h2 class="disp" style="font-size:72px">You may also like</h2></div><div class="grid"><div class="card" style="width:332px" data-href="product-kkaftan.html" data-cat="Kaftans" data-fabric="Kente" data-country="Ghana" data-price="240000" data-search="kente kaftan kaftans kente ghana kumasi, gh" data-order="2"><div class="img" style="width:332px;height:415px"><svg class="" style="" width="332" height="415" viewBox="0 0 600 750" preserveAspectRatio="xMidYMid slice"><defs></defs><rect x="-50.0" y="-50.0" width="700.0" height="850.0" fill="#E9DFCF"/><g transform="translate(300 380) scale(1.05)"><path d="M-60 -170 C-30 -150 30 -150 60 -170 L190 -120 L230 30 L150 50 L120 -40 L120 190 L-120 190 L-120 -40 L-150 50 L-230 30 L-190 -120 Z" transform="translate(10 16)" fill="#000" opacity=".22"/><path d="M-60 -170 C-30 -150 30 -150 60 -170 L190 -120 L230 30 L150 50 L120 -40 L120 190 L-120 190 L-120 -40 L-150 50 L-230 30 L-190 -120 Z" fill="url(#kente)"/><path d="M-40 -158 C-20 -110 20 -110 40 -158" fill="none" stroke="#000" stroke-opacity=".3" stroke-width="4"/></g></svg></div><div class="row"><span class="name">Kente kaftan</span><span class="price">₦240,000</span></div><span class="mono">Kumasi, GH</span></div><div class="card" style="width:332px" data-href="product-skirt.html" data-cat="Wraps and skirts" data-fabric="Bògòlanfini" data-country="Mali" data-price="132000" data-search="bògòlanfini wrap skirt wraps and skirts bògòlanfini mali ségou, ml" data-order="4"><div class="img" style="width:332px;height:415px"><svg class="" style="" width="332" height="415" viewBox="0 0 600 750" preserveAspectRatio="xMidYMid slice"><defs></defs><rect x="-50.0" y="-50.0" width="700.0" height="850.0" fill="#CDB79A"/><g transform="translate(300 380) scale(0.95)"><path d="M-160 -150 L160 -150 L180 190 L-180 190 Z" transform="translate(10 16)" fill="#000" opacity=".22"/><path d="M-160 -150 L160 -150 L180 190 L-180 190 Z" fill="url(#bogolan)"/><path d="M-160 -150 L180 190" stroke="#000" stroke-opacity=".2" stroke-width="3"/></g></svg></div><div class="row"><span class="name">Bògòlanfini wrap skirt</span><span class="price">₦132,000</span></div><span class="mono">Ségou, ML</span></div><div class="card" style="width:332px" data-href="product-scarf.html" data-cat="Wraps and skirts" data-fabric="Adire" data-country="Nigeria" data-price="38000" data-search="adire oniko scarf wraps and skirts adire nigeria abeokuta, ng" data-order="8"><div class="img" style="width:332px;height:415px"><svg class="" style="" width="332" height="415" viewBox="0 0 600 750" preserveAspectRatio="xMidYMid slice"><defs></defs><rect x="-50.0" y="-50.0" width="700.0" height="850.0" fill="#C9D2E8"/><g transform="translate(300 380) scale(0.8)"><path d="M-160 -150 L160 -150 L180 190 L-180 190 Z" transform="translate(10 16)" fill="#000" opacity=".22"/><path d="M-160 -150 L160 -150 L180 190 L-180 190 Z" fill="url(#adire)"/><path d="M-160 -150 L180 190" stroke="#000" stroke-opacity=".2" stroke-width="3"/></g></svg></div><div class="row"><span class="name">Adire oniko scarf</span><span class="price">₦38,000</span></div><span class="mono">Abeokuta, NG</span></div><div class="card" style="width:332px" data-href="product-kaftan.html" data-cat="Kaftans" data-fabric="Adire" data-country="Nigeria" data-price="185000" data-search="adire eleko kaftan kaftans adire nigeria abeokuta, ng" data-order="0"><div class="img" style="width:332px;height:415px"><svg class="" style="" width="332" height="415" viewBox="0 0 600 750" preserveAspectRatio="xMidYMid slice"><defs></defs><rect x="-50.0" y="-50.0" width="700.0" height="850.0" fill="#E3DACB"/><g transform="translate(300 380) scale(1.05)"><path d="M-60 -170 C-30 -150 30 -150 60 -170 L190 -120 L230 30 L150 50 L120 -40 L120 190 L-120 190 L-120 -40 L-150 50 L-230 30 L-190 -120 Z" transform="translate(10 16)" fill="#000" opacity=".22"/><path d="M-60 -170 C-30 -150 30 -150 60 -170 L190 -120 L230 30 L150 50 L120 -40 L120 190 L-120 190 L-120 -40 L-150 50 L-230 30 L-190 -120 Z" fill="url(#adire)"/><path d="M-40 -158 C-20 -110 20 -110 40 -158" fill="none" stroke="#000" stroke-opacity=".3" stroke-width="4"/></g></svg><span class='tag mono'>New</span></div><div class="row"><span class="name">Adire eleko kaftan</span><span class="price">₦185,000</span></div><span class="mono">Abeokuta, NG</span></div></div></section><section class="promise"><div><b>Ships worldwide</b><span>Sent from Lagos with tracking to your door.</span></div><div><b>Your currency</b><span>Pay in naira, dollars, pounds, euros, cedis or shillings.</span></div><div><b>No surprise duties</b><span>Import fees are shown before you pay.</span></div><div><b>Provenance notes</b><span>Every archive piece comes with its history.</span></div></section><footer class="foot"><div class="fcols">
+      <div class="news"><h3>Letters from Koo</h3><span style="opacity:.8">New pieces, archive drops and stories from the makers. Once a month.</span><form class="news-form" novalidate><label class="mono" for="news-email" style="opacity:.7">Email</label><div class="field" style="margin-top:-8px"><input id="news-email" name="email" type="email" required placeholder="name@example.com" autocomplete="email"><button type="submit" aria-label="Sign up"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div><p class="form-msg" aria-live="polite"></p></form></div>
+      <ul><li class="mono" style="opacity:.6">Shop</li><li><a href="shop.html">Clothing</a></li><li><a href="shop.html#accessories">Accessories</a></li><li><a href="archive.html">Archive</a></li><li><a href="help.html#gift-cards">Gift cards</a></li></ul>
+      <ul><li class="mono" style="opacity:.6">Koo</li><li><a href="journal.html">Journal</a></li><li><a href="know-your-cloth.html">Know your cloth</a></li><li><a href="makers.html">Our makers</a></li><li><a href="makers.html">About</a></li></ul>
+      <ul><li class="mono" style="opacity:.6">Help</li><li><a href="help.html#shipping">Shipping and duties</a></li><li><a href="help.html#returns">Returns</a></li><li><a href="help.html#size-guide">Size guide</a></li><li><a href="help.html#contact">Contact</a></li></ul>
+      <div style="display:flex;flex-direction:column;gap:12px;margin-left:auto"><span class="mono" style="opacity:.6">Currency</span><div class="cur mono cur-list" style="width:260px"><button type="button" data-cur="NGN">₦ NGN</button><button type="button" data-cur="USD">$ USD</button><button type="button" data-cur="GBP">£ GBP</button><button type="button" data-cur="EUR">€ EUR</button><button type="button" data-cur="GHS">₵ GHS</button><button type="button" data-cur="KES">KSh KES</button></div></div>
+    </div>
+    <div class="mark"><svg width="1376" height="444" viewBox="0 0 930.0 300" aria-label="Koo"><path d="M0 0 h60.0 v126.0 L168.00000000000003 0 h78.0 L114.0 138.0 L252.0 300 h-78.0 L72.0 180.0 L60.0 192.0 V300 H0 Z" fill="#fff"/><circle cx="426.0" cy="150.0" r="132.0" fill="none" stroke="#fff" stroke-width="36.0"/><circle cx="426.0" cy="150.0" r="84.00000000000001" fill="none" stroke="#fff" stroke-width="36.0"/><circle cx="426.0" cy="150.0" r="24.0" fill="#fff"/><circle cx="756.0" cy="150.0" r="132.0" fill="none" stroke="#fff" stroke-width="36.0"/><circle cx="756.0" cy="150.0" r="84.00000000000001" fill="none" stroke="#fff" stroke-width="36.0"/><circle cx="756.0" cy="150.0" r="24.0" fill="#fff"/></svg></div>
+    <div class="base mono"><span>© 2026 Koo</span><span>Lagos, Nigeria</span><span><a href="help.html#privacy">Privacy</a> · <a href="help.html#terms">Terms</a></span></div></footer></div><script src="motion.js" defer></script><script src="app.js" defer></script></body></html>

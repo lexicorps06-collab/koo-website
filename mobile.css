@@ -11,9 +11,9 @@
   .hero .nav{position:absolute!important;left:0;right:0;top:0}
   .topnav .grp,.nav .grp{width:auto!important}
   .topnav .grp:not(.r),.nav .grp:not(.r){display:none!important}
-  .topnav .grp.r .pill:not([data-href="bag.html"]),.nav .grp.r .pill:not([data-href="bag.html"]){display:none}
+  .topnav .grp.r .pill:not(.bag-pill),.nav .grp.r .pill:not(.bag-pill){display:none}
   .menu-btn{display:inline-flex}
-  .topnav > span[data-href="index.html"] svg,.nav > svg,.nav > span > svg{width:78px;height:25px}
+  .topnav > a[href="index.html"] svg,.nav > a[href="index.html"] svg{width:78px;height:25px}
   .mmenu{position:fixed;inset:0;z-index:100;background:var(--ink);color:#fff;padding:18px 20px 32px;flex-direction:column;gap:6px;overflow:auto}
   .menu-open .mmenu{display:flex}
   .menu-open{overflow:hidden}

@@ -8,8 +8,7 @@
     if (!el.hasAttribute('tabindex') && !/^(A|BUTTON)$/.test(el.tagName)) el.tabIndex = 0;
     const go = ev => {
       if (ev.target.closest('[data-href]') !== el) return;
-      if (el.matches('[data-add]')) return;
-      // Shared-element transition from the kaftan card to its product image
+        // Shared-element transition from the kaftan card to its product image
       const img = el.querySelector('.img');
       if (img && el.dataset.vt) img.style.viewTransitionName = 'hero-img';
       location.href = el.dataset.href;
@@ -81,24 +80,14 @@
     if (el.classList.contains('off')) return;
     el.closest(scope).querySelectorAll(sel).forEach(x => x.classList.remove('on')); el.classList.add('on');
   }));
-  pick('.size', 'div'); pick('.opt', 'div'); pick('.chip', 'div');
+  pick('.size', 'div');
   document.querySelectorAll('.swatch-pick').forEach(s => s.addEventListener('click', () => {
     document.querySelectorAll('.swatch-pick').forEach(x => x.style.outline = 'none');
     s.style.outline = '2px solid #100D0B'; s.style.outlineOffset = '3px';
     const lab = document.querySelector('[data-colour-label]'); if (lab) lab.textContent = 'Colour: ' + s.dataset.name;
   }));
-  document.querySelectorAll('.frow').forEach(r => r.addEventListener('click', () => r.querySelector('.check').classList.toggle('on')));
   document.querySelectorAll('.acc .h').forEach(h => h.addEventListener('click', () => {
     const a = h.parentElement; a.classList.toggle('open'); h.lastElementChild.textContent = a.classList.contains('open') ? '−' : '+';
-  }));
-
-  // 6. Add to bag: the button confirms, the bag count updates, then the bag opens
-  document.querySelectorAll('[data-add]').forEach(btn => btn.addEventListener('click', () => {
-    btn.textContent = 'Added to bag'; btn.style.background = '#1F5A3B';
-    document.querySelectorAll('[data-href="bag.html"]').forEach(p => {
-      if (/Bag \d/.test(p.textContent)) { p.lastChild.textContent = 'Bag 4'; p.classList.remove('bump'); void p.offsetWidth; p.classList.add('bump'); }
-    });
-    setTimeout(() => location.href = btn.dataset.href, reduce ? 300 : 1100);
   }));
 
   // 7. Mobile menu (phones) and scaling (tablets and small laptops)
