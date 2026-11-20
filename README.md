@@ -37,6 +37,10 @@ All motion is off when the visitor's system asks for reduced motion.
 
 Prices, names and stories are sample content.
 
+## Mobile
+
+`mobile.css` lays every page out for phones (760px and below): a Menu button opens a full-screen menu, grids drop to two columns, side-by-side layouts stack, and filters and chips scroll sideways. Between 761px and 1439px the desktop layout is scaled to fit the screen.
+
 ## Run locally
 
 Open `index.html` in a browser, or serve the folder:

@@ -50,8 +50,9 @@
       const r = bw.getBoundingClientRect(), vh = innerHeight;
       const p = Math.min(1, Math.max(0, (vh - r.top) / (vh * 0.75)));
       const e = 1 - Math.pow(1 - p, 3);
-      gap.style.width = (40 + 210 * e) + 'px';
-      inset.style.transform = `translateY(${(1 - e) * 140}px)`;
+      const max = bw.offsetWidth < 700 ? 84 : 250;
+      gap.style.width = (max * 0.16 + max * 0.84 * e) + 'px';
+      inset.style.transform = `translateY(${(1 - e) * (max < 100 ? 60 : 140)}px)`;
       inset.style.opacity = Math.min(1, e * 1.4);
     };
     addEventListener('scroll', () => requestAnimationFrame(tick), { passive: true }); tick();
@@ -99,4 +100,30 @@
     });
     setTimeout(() => location.href = btn.dataset.href, reduce ? 300 : 1100);
   }));
+
+  // 7. Mobile menu (phones) and scaling (tablets and small laptops)
+  const nav = document.querySelector('.topnav, .hero .nav');
+  if (nav && nav.querySelector('.grp')) {
+    const light = !nav.classList.contains('on-paper');
+    const btn = document.createElement('span');
+    btn.className = 'pill menu-btn'; btn.setAttribute('role', 'button'); btn.tabIndex = 0;
+    btn.setAttribute('aria-label', 'Open menu'); btn.textContent = 'Menu';
+    nav.insertBefore(btn, nav.firstChild);
+    const m = document.createElement('div'); m.className = 'mmenu'; m.setAttribute('role', 'dialog'); m.setAttribute('aria-label', 'Menu');
+    m.innerHTML = `<div class="mtop"><span class="pill" style="background:rgba(255,255,255,.14);color:#fff">Koo</span><span class="pill mclose" role="button" tabindex="0" style="background:#fff;color:#100D0B">Close</span></div>
+      <a href="index.html">Home</a><a href="shop.html">Shop</a><a href="archive.html">Archive</a><a href="journal.html">Journal</a><a href="know-your-cloth.html">Know your cloth</a>
+      <div class="msub"><a href="search.html">Search</a><a href="bag.html">Bag</a><a href="makers.html">Our makers</a>
+      <div class="cur mono" style="margin-top:8px"><span class="on" style="background:#fff;color:#100D0B">₦ NGN</span><span>$ USD</span><span>£ GBP</span><span>€ EUR</span><span>₵ GHS</span><span>KSh KES</span></div></div>`;
+    document.body.append(m);
+    const open = v => { document.documentElement.classList.toggle('menu-open', v); document.body.classList.toggle('menu-open', v); };
+    btn.addEventListener('click', () => open(true));
+    m.querySelector('.mclose').addEventListener('click', () => open(false));
+    addEventListener('keydown', e => { if (e.key === 'Escape') open(false); });
+    if (!light) btn.style.cssText = 'background:rgba(16,13,11,.06);color:#100D0B';
+  }
+  const fit = () => {
+    const w = document.documentElement.clientWidth;
+    document.documentElement.style.zoom = (w > 760 && w < 1440) ? (w / 1440).toFixed(4) : '';
+  };
+  fit(); addEventListener('resize', fit);
 })();
