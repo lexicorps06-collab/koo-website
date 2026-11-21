@@ -110,9 +110,35 @@
     addEventListener('keydown', e => { if (e.key === 'Escape') open(false); });
     if (!light) btn.style.cssText = 'background:rgba(16,13,11,.06);color:#100D0B';
   }
-  const fit = () => {
-    const w = document.documentElement.clientWidth;
-    document.documentElement.style.zoom = (w > 760 && w < 1440) ? (w / 1440).toFixed(4) : '';
+  // Desktop layouts are drawn at 1440px. Scale them to fill any screen from 761px up to 2560px;
+  // wider screens keep the 2560px scale and centre the page.
+  const MIN_PX = 11;            // smallest rendered text size when the layout is scaled down
+  const root = document.documentElement;
+  let z = 1, busy = false;
+  const lift = () => {
+    busy = true;
+    document.querySelectorAll('[data-fs]').forEach(el => { el.style.fontSize = el.dataset.fs; delete el.dataset.fs; });
+    if (z < 1) {
+      const need = MIN_PX / z, hits = [];
+      document.querySelectorAll('body *').forEach(el => {
+        if (!el.firstChild || el.closest('svg, script, style, template')) return;
+        const fs = parseFloat(getComputedStyle(el).fontSize);
+        if (fs && fs < need) hits.push(el);
+      });
+      const v = need.toFixed(2) + 'px';
+      hits.forEach(el => { el.dataset.fs = el.style.fontSize; el.style.fontSize = v; });
+    }
+    busy = false;
   };
-  fit(); addEventListener('resize', fit);
+  const fit = () => {
+    const w = root.clientWidth;
+    z = w > 760 ? Math.min(w, 2560) / 1440 : 1;
+    root.style.zoom = z === 1 ? '' : z.toFixed(4);
+    root.classList.toggle('wide', w > 2560);
+    lift();
+  };
+  fit();
+  let t; addEventListener('resize', () => { clearTimeout(t); t = setTimeout(fit, 80); });
+  new MutationObserver(() => { if (!busy && z < 1) { clearTimeout(t); t = setTimeout(lift, 60); } })
+    .observe(document.body, { childList: true, subtree: true });
 })();

@@ -48,3 +48,8 @@
   .bump{animation:bump .5s var(--ease-out)}
   @keyframes bump{30%{transform:scale(1.12)}}
 }
+
+/* Any desktop width: motion.js scales the 1440px layout; keep short controls on one line and frame ultra-wide screens */
+.pill,.chip,button,.btn{white-space:nowrap}
+body{background:var(--paper)}
+html.wide body{background:#100D0B}
